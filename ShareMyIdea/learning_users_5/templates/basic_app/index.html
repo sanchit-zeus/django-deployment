@@ -1,0 +1,18 @@
+{% extends 'basic_app/base.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1><center>Welcome to our Website</center></h1>
+  <h2><center>Share your !DEA</center></h2>
+</div>
+
+{% if user.is_authenticated %}
+<div class="container-fluid">
+  <h6><center>You are succesfully Logged in....</center></h6>
+  <h3>Here is a list of trending ideas:</h3>
+</div>
+{% else %}
+<center>Please Login to see content....</center>
+{% endif %}
+
+{% endblock %}
